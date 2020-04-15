@@ -1,0 +1,80 @@
+
+.register-h1{
+  margin-left: 10rem;
+  color: white;
+  font-size: 7rem;
+  text-align:right;
+  font-family: "Montserrat-Bold";
+}
+
+.login-h1{
+  text-align: center;
+  font-size: 7rem;
+  margin-right: -13%;
+  font-family: "Montserrat-Bold";
+  font-weight: bold;
+}
+
+
+.setting{
+  margin-left: 10rem;
+  color: white;
+  text-align:right;
+  font-size: 1.5rem;
+  padding: 3%;
+
+}
+
+
+.register-body{
+  width: 1800px;
+  margin-right: 2px;
+  background-image:url("/static/img/slider2.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.login-body{
+  background: url("/static/img/about.png") no-repeat center center fixed;
+ -webkit-background-size: cover;
+ -moz-background-size: cover;
+ -o-background-size: cover;
+ background-size: cover;
+  color: white;
+}
+
+.login-img{
+  padding: 15%;
+  width: auto;
+}
+
+
+.div-1{
+  text-align: center;
+  line-height: 1.5rem;
+  font-size: 2rem;
+  padding: 2.5% 8%;
+}
+
+.login-password{
+  position: relative;
+  margin-right: -6.8%;
+
+}
+
+.login-quote{
+  text-align: center;
+  line-height: 2rem;
+  font-size: 3rem;
+  font-weight:bold;
+}
+
+
+@media screen and (max-width:1028rem) {
+  body{
+    background-image:empty;
+    background-color:#ff468;
+  }
+}
