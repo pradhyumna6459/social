@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Socialसेवा</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+      <style>
+          div{
+          background-image:url("{% static 'img/about.png' %}");
+          background-repeat: no-repeat center center fixed;
+          background-size: cover;
+          color: white;
+          padding: 0%;
+          width: auto;
+          }
+      </style>
+      <link rel="stylesheet" href="{% static 'styles/master.css' %}">
+
+        <link rel="shortcut icon" type="image/x-icon" href="{% static 'img/favicon.png' %}">
+  </head>
+  <body>
+    <form  action="login" method="post">
+         {% csrf_token %}
+        <div class="div-1">
+          <h1 class="login-h1">LogIn</h1><br>
+          <label >Username: </label>
+             <input type="text" name="username" placeholder="username"><br>
+            <br>
+          <div class="login-password">
+            <label >Password:</label><span> </span>
+              <input type="password" name="password" placeholder="password"><br>
+
+          </div>
+            <input type="Submit" placeholder="Submit">
+
+          <br>
+            </form>
+          <p class="login-quote">Together we are going to produce a spark that will change the world.</p><br>
+          <p class="login-quote">We warmly welcome you as a part of our happy family to make society <br><br>better place and serve the needy ones.</p>
+
+        </div>
+        <footer>
+          <div class="copy-right_text">
+              <div class="container">
+                  <div class="footer_border"></div>
+                  <div class="row">
+                      <div class="col-xl-12">
+                          <p class="copy_right text-center" style="color:lightblue;">
+
+                        Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Designed by Abhishek Nigam
+
+                          </p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </footer>
+
+  </body>
+</html>

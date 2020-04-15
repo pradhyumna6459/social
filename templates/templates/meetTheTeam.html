@@ -1,0 +1,286 @@
+{% load static %}
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Meet The Team</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <link rel="manifest" href="site.webmanifest"> -->
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'img/favicon.png' %}">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="{% static 'styles/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/themify-icons.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/nice-select.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/flaticon.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/animate.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/slicknav.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/style.css' %}">
+    <!-- <link rel="stylesheet" href="css/responsive.css"> -->
+</head>
+
+<body>
+    <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+    <!-- header-start -->
+    <header>
+        <div class="header-area ">
+            <div id="sticky-header" class="main-header-area">
+                <div class="container-fluid p-0">
+                    <div class="row align-items-center justify-content-between no-gutters">
+                        <div class="col-xl-2 col-lg-2">
+                            <div class="logo-img">
+                                <a href="index.html">
+                                    <img src="{% static 'img/logo1.png' %}" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xl-7 col-lg-7">
+                            <div class="main-menu  d-none d-lg-block">
+                                <nav>
+                                    <ul id="navigation">
+                                        {% if user.is_authenticated %}
+                                        <li><a class="active" href="afterlogin">home</a></li>
+                                        <li><a href="#about">About</a></li>
+                                        <li><a href="#causes">causes</a></li>
+                                        <li><a href="#ngo">NGOs</li>
+                                        <li><a href="contact">Contact us<i class="ti-angle-down"></i></a>
+                                            <ul class="submenu">
+                                                <li><a href="contact">Related Queries</a></li>
+                                                <li><a href="meetTheTeam">Meet the team</a></li>
+                                            </ul>
+                                        </li>
+										{% else %}
+                                        <li><a class="active" href="accounts/home">home</a></li>
+                                        <li><a href="#about">About</a></li>
+                                        <li><a href="#causes">causes</a></li>
+                                        <li><a href="#ngo">NGOs</li>
+                                        <li><a href="accounts/contact">Contact us<i class="ti-angle-down"></i></a>
+                                            <ul class="submenu">
+                                                <li><a href="accounts/contact">Related Queries</a></li>
+                                                <li><a href="accounts/meetTheTeam">Meet the team</a></li>
+                                            </ul>
+                                        </li>
+										{% endif %}
+
+
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 d-none d-lg-block">
+                            <div class="donate_now">
+                                 {% if user.is_authenticated %}
+										<li>Hello  {{user.first_name}}</li>
+										<li><a href="logout">Logout</a></li>
+										{% else %}
+
+                                        <a href="login" class="boxed-btn">Login</a>
+										{% endif %}
+
+
+
+                            </div>
+
+                        </div>
+                        <div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header-end -->
+
+    <!-- breadcam_area_start -->
+    <div class="breadcam_area" style="background-image: url(/static/img/breadcam.png);" >
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="breadcam_text">
+                        <h3>Meet the Team</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- breadcam_area_end -->
+
+    <!-- ================ contact section start ================= -->
+
+    <div id="causes" class="servce_area">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="section_title text-center mb-60">
+
+                        <h3>
+                            We Serve For People
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-4 col-md-4">
+                    <div class="single_serve text-center">
+                      <div class="serve_icon">
+                          <img src="{% static 'img/anigam.jpg' %}" alt="" style="width: 120%;border-radius:100%;">
+                      </div>
+                      <h3>Abhishek Nigam</h3>
+                      <p>Front-End Developer</p>
+                      <p>IT sophomore at SGSITS.</p>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-4">
+                    <div class="single_serve text-center">
+
+                        <div class="serve_icon">
+                            <img src="{% static 'img/arunwal.jpg' %}" alt="" style="width: 120%;border-radius:100%;">
+                        </div>
+                        <h3>Akshat Runwal</h3>
+                        <p>Front-End Developer</p>
+                        <p>IT sophomore at SGSITS.</p>
+
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-4">
+                    <div class="single_serve text-center">
+                        <div class="serve_icon">
+                            <img src="{% static 'img/prathore.jpg' %}" alt="" style="width: 130%;border-radius:100%;">
+                        </div>
+                        <h3>Pradhyumna Rathore</h3>
+                        <p>Back-End Developer</p>
+                        <p>IT sophomore at SGSITS.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- ================ contact section end ================= -->
+
+    <!-- footer_start -->
+    <footer class="footer">
+        <div class="footer_top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-3 col-md-6 col-lg-3">
+                        <div class="footer_widget">
+                            <h3 class="footer_title">
+                                Join With Us
+                            </h3>
+                            <p class="footer_text doanar"> <a class="first" href="RegisterPage.html">Become a Volunteer</a> <br></p>
+
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6 col-lg-3">
+                        <div class="footer_widget">
+                            <h3 class="footer_title">
+                              Our Team
+                            </h3>
+                            <p class="footer_text">Akshat Runwal <br>
+                                Abhishek Nigam<br>
+                                Pradhyumna Singh Rathore<br>
+
+                            <div class="socail_links">
+                                <ul>
+                                    <li>
+                                        <a href="https://www.facebook.com/akshat.runwal">
+                                            <i class="fa fa-facebook-square"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.linkedin.com/mwlite/in/pradhyumna-singh-rathore-b6a767177">
+                                            <i class="fa fa-linkedin"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.instagram.com/abhishek_nigam34/">
+                                            <i class="fa fa-instagram"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-md-6 col-lg-2">
+                        <div class="footer_widget">
+                            <h3 class="footer_title">
+                                Navigation
+                            </h3>
+                            <ul> {% if user.is_authenticated %}
+                                <li><a href="afterlogin">Home</a></li>
+                                <li><a href="afterlogin#about">About</a></li>
+
+
+										{% else %}
+                                        <li><a href="accounts/home">Home</a></li>
+                                        <li><a href="accounts/home#about">About</a></li>
+
+
+
+										{% endif %}
+
+
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="copy-right_text">
+            <div class="container">
+                <div class="footer_border"></div>
+                <div class="row">
+                    <div class="col-xl-12">
+                        <p class="copy_right text-center">
+
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Designed by Akshat Runwal
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+        <!-- footer_end -->
+
+         <!-- JS here -->
+    <script src="{% static 'js/modernizr-3.5.0.min.js' %}"></script>
+    <script src="{% static 'js/jquery-1.12.4.min.js' %}"></script>
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'js/ajax-form.js' %}"></script>
+    <script src="{% static 'js/waypoints.min.js' %}"></script>
+    <script src="{% static 'js/jquery.counterup.min.js' %}"></script>
+    <script src="{% static 'js/imagesloaded.pkgd.min.js' %}"></script>
+    <script src="{% static 'js/scrollIt.js' %}"></script>
+    <script src="{% static 'js/jquery.scrollUp.min.js' %}"></script>
+    <script src="{% static 'js/wow.min.js' %}"></script>
+    <script src="{% static 'js/nice-select.min.js' %}"></script>
+    <script src="{% static 'js/jquery.slicknav.min.js' %}"></script>
+    <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'js/plugins.js' %}"></script>
+
+    <!--contact js-->
+
+
+    <script src="{% static 'js/main.js' %}"></script>
+    </body>
+
+    </html>

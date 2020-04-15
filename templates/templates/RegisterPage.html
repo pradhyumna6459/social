@@ -1,0 +1,82 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Socialसेवा</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+      <link rel="stylesheet" href="{% static 'styles/master.css' %}">
+      <style>
+          div{
+          background-image:url("{% static 'img/slider2.jpg' %}");
+          background-repeat: no-repeat center center fixed;
+          width: 1800px;
+          margin-right: 2px;
+          background-size: cover;
+
+          }
+      </style>
+      <link rel="shortcut icon" type="image/x-icon" href="{% static 'img/favicon.png' %}">
+  </head>
+  <body>
+    <div class="row-div" style="margin-top: 100px;">
+      <div class="col-lg-6">
+        <h1 class="register-h1">SIGN UP</h1>
+          <form  action="signup" method="post">
+           {% csrf_token %}
+              <h2 class="register-h2">
+  	       <LABEL>First name<span class="req"></span></LABEL>
+              <input type="text" name="first_name" placeholder="First Name">
+
+  	       <br>
+              <LABEL>Last name<span class="req"></span></LABEL>
+              <input type="text" name="last_name" placeholder="last Name">
+
+  	       <br>
+
+         <label>Username<span class="req"></span></label>
+         <input type="text" name="username" placeholder="Username">
+
+  	     <br>
+
+        <label>Password<span class="req"></span></label>
+        <input type="password" name="password1" placeholder="Password">
+        <br>
+        <label>Password<span class="req"></span></label>
+        <input type="password" name="password2" placeholder="Confirm Password">
+        <br>
+              <LABEL>Email Address:<span class="req"></span></LABEL>
+              <input type="email" name="email" placeholder="abc@gamil.com">
+  	    <br>
+
+        <input type="Submit" placeholder="Sign up">
+              </h2>
+
+        </form>
+
+
+
+    </div>
+
+
+    </div>
+
+    <footer>
+      <div class="copy-right_text">
+          <div class="container">
+              <div class="footer_border"></div>
+              <div class="row">
+                  <div class="col-xl-12">
+                      <p class="copy_right text-center" style="color:lightblue; padding-top:100px;" >
+
+                    Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Designed by Abhishek Nigam
+
+                      </p>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </footer>
+
+  </body>
+</html>
